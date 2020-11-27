@@ -3,8 +3,6 @@ package com.martaportoles.ProyectoMaven;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import javax.activation.MailcapCommandMap;
-
 import org.junit.Rule;
 import org.junit.Test;
 

@@ -24,16 +24,7 @@ public class Cliente {
 	public enum Documento {
 		DNI, NIE;
 		
-//		public static String getTipoDoc(Documento tipoDocumento) {
-//			switch (tipoDocumento) {
-//				case DNI:
-//					return "DNI";
-//				case NIE:
-//					return "NIE";
-//				default:
-//					return "not-set";
-//			}
-//		}
+
 	}
 
 	public Cliente(Documento tipDocumento, String numeroDniNie, String email, String password) {

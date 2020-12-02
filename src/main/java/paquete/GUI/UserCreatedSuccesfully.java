@@ -6,18 +6,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 
-public class LoggedUser {
+public class UserCreatedSuccesfully {
 
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void LoggedUser() {
+	public static void UserCreatedSuccesfully() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LoggedUser window = new LoggedUser();
+					UserCreatedSuccesfully window = new UserCreatedSuccesfully();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -29,7 +29,7 @@ public class LoggedUser {
 	/**
 	 * Create the application.
 	 */
-	public LoggedUser() {
+	public UserCreatedSuccesfully() {
 		initialize();
 	}
 
@@ -38,14 +38,13 @@ public class LoggedUser {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setFont(new Font("Verdana", Font.BOLD, 14));
-		frame.setBounds(400, 300, 196, 167);
+		frame.setBounds(400, 300, 450, 202);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Bienvenido!");
+		JLabel lblNewLabel = new JLabel("El cliente se ha creado correctamente");
 		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblNewLabel.setBounds(49, 56, 193, 14);
+		lblNewLabel.setBounds(74, 73, 296, 14);
 		frame.getContentPane().add(lblNewLabel);
 	}
 

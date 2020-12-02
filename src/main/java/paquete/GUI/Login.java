@@ -29,7 +29,7 @@ import javax.swing.SwingConstants;
 
 public class Login {
 
-	private JFrame frame;
+	private JFrame frmLogin;
 	private JTextField txtUsuario;
 	private JPasswordField passwordField;
 
@@ -41,7 +41,7 @@ public class Login {
 			public void run() {
 				try {
 					Login window = new Login();
-					window.frame.setVisible(true);
+					window.frmLogin.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -60,33 +60,43 @@ public class Login {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setFont(new Font("Verdana", Font.PLAIN, 11));
-		frame.setBounds(100, 100, 525, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmLogin = new JFrame();
+		frmLogin.setTitle("Login");
+		frmLogin.getContentPane().setFont(new Font("Verdana", Font.PLAIN, 11));
+		frmLogin.setBounds(400, 300, 525, 300);
+		frmLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmLogin.getContentPane().setLayout(null);
+		
+		JLabel btnEye = new JLabel("");
+		btnEye.addMouseListener(new MouseAdapter() {
+		});
+		btnEye.setBackground(Color.LIGHT_GRAY);
+		btnEye.setHorizontalAlignment(SwingConstants.LEFT);
+		btnEye.setIcon(new ImageIcon("C:\\Users\\Marta\\git\\Practica3_Testing\\src\\main\\resources\\eye-solid.png"));
+		btnEye.setBounds(326, 84, 20, 23);
+		frmLogin.getContentPane().add(btnEye);
 		
 		JLabel lblUsuario = new JLabel("USUARIO");
 		lblUsuario.setBounds(48, 32, 74, 18);
 		lblUsuario.setFont(new Font("Verdana", Font.BOLD, 14));
-		frame.getContentPane().add(lblUsuario);
+		frmLogin.getContentPane().add(lblUsuario);
 		
 		txtUsuario = new JTextField();
 		txtUsuario.setBounds(149, 33, 167, 20);
-		frame.getContentPane().add(txtUsuario);
+		frmLogin.getContentPane().add(txtUsuario);
 		txtUsuario.setColumns(8);
 		
 		JLabel lblContrasena = new JLabel("CONTRASEÑA");
 		lblContrasena.setBounds(31, 84, 140, 18);
 		lblContrasena.setFont(new Font("Verdana", Font.BOLD, 14));
-		frame.getContentPane().add(lblContrasena);
+		frmLogin.getContentPane().add(lblContrasena);
 		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(149, 85, 167, 20);
-		frame.getContentPane().add(passwordField);
+		frmLogin.getContentPane().add(passwordField);
 		
 		final JCheckBox chckbxMostrarContrasena = new JCheckBox("Mostrar contraseña");
-		chckbxMostrarContrasena.setBounds(352, 84, 167, 23);
+		chckbxMostrarContrasena.setBounds(326, 84, 167, 23);
 		chckbxMostrarContrasena.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chckbxMostrarContrasena.isSelected()) 
@@ -99,7 +109,7 @@ public class Login {
 				}
 			}
 		});
-		frame.getContentPane().add(chckbxMostrarContrasena);
+		frmLogin.getContentPane().add(chckbxMostrarContrasena);
 		
 		final JLabel lblCambiarContraseña = new JLabel("He olvidado mi contraseña");
 		lblCambiarContraseña.addMouseListener(new MouseAdapter() {
@@ -124,7 +134,7 @@ public class Login {
 		lblCambiarContraseña.setBackground(Color.LIGHT_GRAY);
 		lblCambiarContraseña.setBounds(159, 114, 167, 15);
 		lblCambiarContraseña.setFont(new Font("Verdana", Font.PLAIN, 11));
-		frame.getContentPane().add(lblCambiarContraseña);
+		frmLogin.getContentPane().add(lblCambiarContraseña);
 		
 		JButton btnLogin = new JButton("LOGIN");
 
@@ -138,15 +148,6 @@ public class Login {
 		btnLogin.setBackground(Color.GRAY);
 		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 14));
-		frame.getContentPane().add(btnLogin);
-		
-		JLabel btnEye = new JLabel("");
-		btnEye.addMouseListener(new MouseAdapter() {
-		});
-		btnEye.setBackground(Color.LIGHT_GRAY);
-		btnEye.setHorizontalAlignment(SwingConstants.LEFT);
-		btnEye.setIcon(new ImageIcon("C:\\Users\\Marta\\git\\Practica3_Testing\\src\\main\\resources\\eye-solid.png"));
-		btnEye.setBounds(326, 84, 20, 23);
-		frame.getContentPane().add(btnEye);
+		frmLogin.getContentPane().add(btnLogin);
 	}
 }

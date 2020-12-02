@@ -12,8 +12,9 @@ import java.awt.event.ActionEvent;
 
 public class ForgottenPassword {
 
-	private JFrame frame;
+	private JFrame frmRecuperacionDeContrasea;
 	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -23,7 +24,7 @@ public class ForgottenPassword {
 			public void run() {
 				try {
 					ForgottenPassword window = new ForgottenPassword();
-					window.frame.setVisible(true);
+					window.frmRecuperacionDeContrasea.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -42,18 +43,19 @@ public class ForgottenPassword {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setFont(new Font("Verdana", Font.PLAIN, 11));
-		frame.getContentPane().setLayout(null);
+		frmRecuperacionDeContrasea = new JFrame();
+		frmRecuperacionDeContrasea.setTitle("Recuperacion de contraseña");
+		frmRecuperacionDeContrasea.getContentPane().setFont(new Font("Verdana", Font.PLAIN, 11));
+		frmRecuperacionDeContrasea.getContentPane().setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(41, 87, 183, 20);
-		frame.getContentPane().add(textField);
+		textField.setBounds(400, 300, 183, 20);
+		frmRecuperacionDeContrasea.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Escriba su correo para enviarle su nueva contraseña:");
-		lblNewLabel.setBounds(41, 53, 285, 14);
-		frame.getContentPane().add(lblNewLabel);
+		lblNewLabel.setBounds(41, 53, 323, 14);
+		frmRecuperacionDeContrasea.getContentPane().add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Enviar");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -63,8 +65,13 @@ public class ForgottenPassword {
 			}
 		});
 		btnNewButton.setBounds(275, 137, 89, 23);
-		frame.getContentPane().add(btnNewButton);
-		frame.setBounds(100, 100, 403, 221);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmRecuperacionDeContrasea.getContentPane().add(btnNewButton);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(41, 80, 265, 20);
+		frmRecuperacionDeContrasea.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
+		frmRecuperacionDeContrasea.setBounds(100, 100, 403, 221);
+		frmRecuperacionDeContrasea.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

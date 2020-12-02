@@ -8,7 +8,7 @@ import java.awt.Font;
 
 public class ContrasenaEnviadaCorrectamente {
 
-	private JFrame frame;
+	private JFrame frmContraseaEnviada;
 
 	/**
 	 * Launch the application.
@@ -18,7 +18,7 @@ public class ContrasenaEnviadaCorrectamente {
 			public void run() {
 				try {
 					ContrasenaEnviadaCorrectamente window = new ContrasenaEnviadaCorrectamente();
-					window.frame.setVisible(true);
+					window.frmContraseaEnviada.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,15 +37,16 @@ public class ContrasenaEnviadaCorrectamente {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 360, 161);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmContraseaEnviada = new JFrame();
+		frmContraseaEnviada.setTitle("Contraseña enviada");
+		frmContraseaEnviada.setBounds(400, 300, 360, 161);
+		frmContraseaEnviada.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmContraseaEnviada.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Su nueva contraseña se ha enviado correctamente");
 		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 11));
 		lblNewLabel.setBounds(28, 46, 297, 14);
-		frame.getContentPane().add(lblNewLabel);
+		frmContraseaEnviada.getContentPane().add(lblNewLabel);
 	}
 
 }
